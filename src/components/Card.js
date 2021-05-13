@@ -11,7 +11,7 @@ const Card = () => {
 
   const getData = () => {
     axios.get("https://randomuser.me/api/").then((res) => {
-      //   console.log(res.data.results);
+      //console.log(res.data.results);
       setUserList(res.data.results);
     });
   };
@@ -25,7 +25,7 @@ const Card = () => {
         {userList?.map((user, index) => (
           <div key={index}>
             <div className="content1 person pic">
-              <img src={user.picture.thumbnail} alt="" srcset="" />
+              <img src={user.picture.large} alt="" srcset="" />
               <span className="content name">
                 {user.name.title} {user.name.first} {user.name.last}
               </span>
